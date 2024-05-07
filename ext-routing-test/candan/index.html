@@ -39,6 +39,19 @@
         embedded_svc.settings.enabledFeatures = ['LiveAgent'];
         embedded_svc.settings.entryFeature = 'LiveAgent';
 
+        // JS: my custom code!
+        embedded_svc.setting.extraPrechatFormDetails = [{
+            "label":"First Name",
+            "transcriptFields": ["FirstName__c"]
+        },{
+            "label":"Last Name",
+            "transcriptFields": ["LastName__c"]
+        },{
+            "label": "Email",
+            "transcriptFields": ["Email__c"]
+        }];
+        // JS: end of my custom code!?
+
         embedded_svc.init(
             'https://genesys243-dev-ed.develop.my.salesforce.com',
             'https://genesys243-dev-ed.develop.my.salesforce-sites.com/',
